@@ -31,7 +31,7 @@ function Recipes() {
             setNumber(event.target.value);
           }}
         />
-        <button type="submit"> Get Recipes</button>
+        <button type="submit"> Get Recipes </button>
       </form>
       <ul>
         {recipes.slice(0, Number(number)).map((hits) => {
