@@ -97,6 +97,16 @@ function Recipes() {
         </div>
 
         <div>
+          <h2>Calories</h2>
+          <input
+            value={calories}
+            onChange={updateCalories}
+            className="calories"
+          >
+          </input>
+        </div>
+
+        <div>
           <button className="search-button" type="submit">
             Search Recipes
           </button>
