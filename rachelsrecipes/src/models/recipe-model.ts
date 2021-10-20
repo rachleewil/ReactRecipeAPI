@@ -1,7 +1,8 @@
 export interface Recipe {
-    recipe: {
+  recipe: {
     uri: string;
     label: string;
+    calories: string;
     image: string;
     source: string;
     url: string;
@@ -26,5 +27,5 @@ export interface Recipe {
 }
 
 export interface RecipeResponse {
-    hits: Recipe[];
+  hits: Recipe[];
 }
