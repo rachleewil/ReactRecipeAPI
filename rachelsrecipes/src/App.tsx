@@ -5,7 +5,8 @@ import Recipes from './components/Recipes';
 function App() {
   return (
     <div className="App">
-      <Recipes />
+      <h1>Rachel's Recipes</h1>
+      <Recipes/>
     </div>
   );
 }

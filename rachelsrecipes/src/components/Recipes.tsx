@@ -45,36 +45,37 @@ function Recipes() {
 
   return (
     <div className="Recipes">
-      <h1>Keyword Search</h1>
+      <h2>Search by Recipe</h2>
+      <p className="requriedField">*required field*</p>
       <form onSubmit={getSearch} className="search-form">
-        <input
+        <input required
           className="search-bar"
           type="text"
-          value={query}
           onChange={updateQuery}
         />
         <div>
-          <h2>Meal Types</h2>
-          <select
-            value={mealType}
-            onChange={updateMealType}
+          <h2>Select a Meal Type</h2>
+          <p className="requriedField">*required field*</p>
+          <select required
             className="mealType"
+            onChange={updateMealType}
           >
-            <option value="DEFAULT">-- select an option --</option>
+            <option value="">Please Select</option>
             <option value="Breakfast">Breakfast</option>
             <option value="Lunch">Lunch</option>
             <option value="Dinner">Dinner</option>
+            <option value="Snack">Snack</option>
           </select>
         </div>
 
         <div>
-          <h2>Cuisine Types</h2>
-          <select
-            value={cuisineType}
-            onChange={updateCuisineType}
+          <h2>Select a Cuisine Type</h2>
+          <p className="requriedField">*required field*</p>
+          <select required
             className="cuisineType"
+            onChange={updateCuisineType}
           >
-            <option value="DEFAULT">-- select an option --</option>
+            <option value="">Please Select</option>
             <option value="American">American</option>
             <option value="Asian">Asian</option>
             <option value="British">British</option>
@@ -97,11 +98,11 @@ function Recipes() {
         </div>
 
         <div>
-          <h2>Calories</h2>
-          <input
-            value={calories}
-            onChange={updateCalories}
+          <h2>Calorie Range</h2>
+          <p className="requriedField">*required field*</p>
+          <input required
             className="calories"
+            onChange={updateCalories}
           >
           </input>
         </div>
@@ -119,6 +120,7 @@ function Recipes() {
             <li>{hits.recipe.label} </li>
             <li>{hits.recipe.mealType}</li>
             <li>{hits.recipe.cuisineType}</li>
+            <li>{hits.recipe.calories}</li>
           </>
         );
       })}
