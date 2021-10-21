@@ -1,9 +1,6 @@
 import { ReactNode, createContext, useState } from "react";
 import { Recipe } from "../models/recipe-model";
 
-
-import { User } from "../model/User";
-
 interface FavoritesContextValue {
 
         favorites: Recipe[],
