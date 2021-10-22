@@ -1,9 +1,7 @@
 //children: JSX.Element,
 import React, { useContext } from "react";
 import { ReactNode } from "react";
-
 import { useParams } from "react-router";
-
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { FavoritesContext } from "../context/FavoritesContext";
 import { Recipe } from "../models/recipe-model";
@@ -17,9 +15,9 @@ interface Props {
     function Favorites({favs, children}: Props) {
     return (
         <div className="RecipeFavorites">
-            Favorites
+            <h2>Favorites</h2>
             <div>
-                Favorites list page of Recipes
+                <p>Favorites list page of Recipes</p>
             </div>
             {children}
         </div>
