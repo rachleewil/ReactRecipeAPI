@@ -4,6 +4,7 @@ import { Recipe } from "../models/recipe-model";
 import { fetchRecipes } from "../services/ReactAPIServices";
 import Results from '../components/Results';
 
+
 //import "./Recipes.css";
 
 function Recipes() {
@@ -43,16 +44,16 @@ function Recipes() {
   return (
     <div className="Recipes">
       <h2>Search by Recipe</h2>
-      <p className="requriedField">*required field*</p>
       <form onSubmit={getSearch} className="search-form">
         <input required
           className="search-bar"
           type="text"
           onChange={updateQuery}
         />
+        <p className="requriedField">*required field*</p>
+
         <div>
           <h2>Select a Meal Type</h2>
-          <p className="requriedField">*required field*</p>
           <select required
             className="mealType"
             onChange={updateMealType}
@@ -63,11 +64,11 @@ function Recipes() {
             <option value="Dinner">Dinner</option>
             <option value="Snack">Snack</option>
           </select>
+          <p className="requriedField">*required field*</p>
         </div>
 
         <div>
           <h2>Select a Cuisine Type</h2>
-          <p className="requriedField">*required field*</p>
           <select required
             className="cuisineType"
             onChange={updateCuisineType}
@@ -92,6 +93,7 @@ function Recipes() {
             <option value="South American">South American</option>
             <option value="South East Asian">South East Asian</option>
           </select>
+          <p className="requriedField">*required field*</p>
         </div>
 
         <div>
@@ -102,7 +104,7 @@ function Recipes() {
       </form>
 
       <Results recipes={recipes}/>
-
+      
     </div>
   );
 }
