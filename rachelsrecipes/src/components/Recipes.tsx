@@ -1,6 +1,7 @@
 import { SetStateAction, useState } from "react";
 import { Recipe } from "../models/recipe-model";
 import { fetchRecipes } from "../services/ReactAPIServices";
+import RecipeItem from "./RecipeItem";
 
 //import "./Recipes.css";
 
@@ -113,17 +114,14 @@ function Recipes() {
         </div>
       </form>
 
-      {recipes.map((hits) => {
+      {recipes.map((hits, index) => {
         return (
-          <>
-            <li>{hits.recipe.label} </li>
-            <li>{hits.recipe.mealType}</li>
-            <li>{hits.recipe.cuisineType}</li>
-          </>
-        );
+          <RecipeItem label={hits.recipe.label} />
+        )
       })}
     </div>
   );
 }
 
 export default Recipes;
+
