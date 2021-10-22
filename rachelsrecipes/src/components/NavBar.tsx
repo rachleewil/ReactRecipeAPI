@@ -6,9 +6,12 @@ function NavBar() {
     <>
         <nav>
           <div className="NavBar">
-            <p><Link to="/">Search for Recipes</Link></p>
-            <p><Link to="/favorites">Favorites List</Link></p>
-          </div>
+            <h1>Rachel's Recipes</h1>
+            <div className="Links">
+              <Link to="/">Search for Recipes</Link>
+              <Link to="/favorites">Favorites List</Link>
+            </div>
+          </div>     
         </nav>
     </>
   );

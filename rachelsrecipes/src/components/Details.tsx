@@ -7,18 +7,20 @@ import { FavoritesContext } from "../context/FavoritesContext";
 import { Recipe } from "../models/recipe-model";
 import { Link } from "react-router-dom"; {/* added Link */}
 
+
 interface Props {
     favs?: Recipe[];
     children?: ReactNode; 
     
 }
-//function Favorites({children}: {children: ReactNode}) {
-    function Favorites({favs, children}: Props) {
+
+//function Details({children}: {children: ReactNode}) {
+    function Details({favs, children}: Props)  {
     return (
-        <div className="RecipeFavorites">
-            <h2>Favorite Recipes</h2>
+        <div className="RecipeDetails">
+            <h2>Recipe Details</h2>
             <div>
-                <p>List of Your Recipes</p>
+                <p>Details for each recipe</p>
                 <p><Link to="/"><button>Back to Home</button></Link></p>
             </div>
             {children}
@@ -26,9 +28,12 @@ interface Props {
     )
 }
 
-// favorites list page of Recipes
-// details button
-// remove recipes from favorites list
-//back button
+// Link to see the recipe on their original source site
+//Favorites button
+//Back button
 
-export default Favorites;
+
+export default Details;
+
+
+
