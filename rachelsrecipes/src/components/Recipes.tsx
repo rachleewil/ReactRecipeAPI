@@ -1,7 +1,8 @@
+import React from 'react';
 import { SetStateAction, useState } from "react";
 import { Recipe } from "../models/recipe-model";
 import { fetchRecipes } from "../services/ReactAPIServices";
-import RecipeItem from "./RecipeItem";
+import Results from '../components/Results';
 
 //import "./Recipes.css";
 
@@ -11,7 +12,6 @@ function Recipes() {
   const [query, setQuery] = useState("");
   const [mealType, setMealType] = useState("");
   const [cuisineType, setCuisineType] = useState("");
-  const [calories, setCalories] = useState("");
 
   // const updateSearch = (e: { target: { value: SetStateAction<string> } }) => {
   //   setSearch(e.target.value);
@@ -27,17 +27,13 @@ function Recipes() {
     setCuisineType(e.target.value);
   };
 
-  const updateCalories = (e: { target: { value: SetStateAction<string> } }) => {
-    setCalories(e.target.value);
-  };
-
   const updateQuery = (e: { target: { value: SetStateAction<string> } }) => {
     setQuery(e.target.value);
   };
 
   const getSearch = (e: { preventDefault: () => void }) => {
     e.preventDefault();
-    fetchRecipes(query, mealType, cuisineType, calories).then(
+    fetchRecipes(query, mealType, cuisineType).then(
       (recipesFromApi) => {
         setRecipes(recipesFromApi);
       }
@@ -46,36 +42,37 @@ function Recipes() {
 
   return (
     <div className="Recipes">
-      <h1>Keyword Search</h1>
+      <h2>Search by Recipe</h2>
       <form onSubmit={getSearch} className="search-form">
-        <input
+        <input required
           className="search-bar"
           type="text"
-          value={query}
           onChange={updateQuery}
         />
+        <p className="requriedField">*required field*</p>
+
         <div>
-          <h2>Meal Types</h2>
-          <select
-            value={mealType}
-            onChange={updateMealType}
+          <h2>Select a Meal Type</h2>
+          <select required
             className="mealType"
+            onChange={updateMealType}
           >
-            <option value="DEFAULT">-- select an option --</option>
+            <option value="">Please Select</option>
             <option value="Breakfast">Breakfast</option>
             <option value="Lunch">Lunch</option>
             <option value="Dinner">Dinner</option>
+            <option value="Snack">Snack</option>
           </select>
+          <p className="requriedField">*required field*</p>
         </div>
 
         <div>
-          <h2>Cuisine Types</h2>
-          <select
-            value={cuisineType}
-            onChange={updateCuisineType}
+          <h2>Select a Cuisine Type</h2>
+          <select required
             className="cuisineType"
+            onChange={updateCuisineType}
           >
-            <option value="DEFAULT">-- select an option --</option>
+            <option value="">Please Select</option>
             <option value="American">American</option>
             <option value="Asian">Asian</option>
             <option value="British">British</option>
@@ -95,16 +92,7 @@ function Recipes() {
             <option value="South American">South American</option>
             <option value="South East Asian">South East Asian</option>
           </select>
-        </div>
-
-        <div>
-          <h2>Calories</h2>
-          <input
-            value={calories}
-            onChange={updateCalories}
-            className="calories"
-          >
-          </input>
+          <p className="requriedField">*required field*</p>
         </div>
 
         <div>
@@ -114,11 +102,8 @@ function Recipes() {
         </div>
       </form>
 
-      {recipes.map((hits, index) => {
-        return (
-          <RecipeItem label={hits.recipe.label} />
-        )
-      })}
+      <Results recipes={recipes}/>
+      
     </div>
   );
 }

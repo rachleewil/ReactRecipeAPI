@@ -2,7 +2,7 @@ export interface Recipe {
   recipe: {
     uri: string;
     label: string;
-    calories: string;
+    calories: number;
     image: string;
     source: string;
     url: string;
