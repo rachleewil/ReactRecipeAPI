@@ -5,11 +5,12 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { FavoritesContextProvider } from './context/FavoritesContext';
 
-
 ReactDOM.render(
   <React.StrictMode>
+  {/* The context provider must be wrapped around the app 
+  for the context to be accessible to all parts of the code */}
     <FavoritesContextProvider>
-    <App />
+      <App />
     </FavoritesContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
