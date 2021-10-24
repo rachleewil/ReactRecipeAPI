@@ -37,7 +37,8 @@ interface Props {
 
 export function FavoritesContextProvider({children}: {children: Props}) {
 
-    const [favorites, setFavorites] = useState<Recipe[]>([]);
+    const [favorites, setFavorites] = useState<Recipe[]>([  
+]);
 
 
     const addFavorite = (frecipe: Recipe): void => {
