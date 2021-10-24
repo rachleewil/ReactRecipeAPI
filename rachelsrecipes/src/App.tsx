@@ -6,6 +6,7 @@ import Details from './components/Details'
 import NavBar from './components/NavBar';
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom"; {/* added Link */};
 
+
 function App() {
   return (
     <>

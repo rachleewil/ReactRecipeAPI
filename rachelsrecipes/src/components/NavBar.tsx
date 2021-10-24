@@ -7,7 +7,7 @@ function NavBar() {
         <nav>
           <div className="NavBar">
             <h1>Rachel's Recipes</h1>
-            <div className="Links">
+            <div className="NavBarLinks">
               <Link to="/">Search for Recipes</Link>
               <Link to="/favorites">Favorites List</Link>
             </div>

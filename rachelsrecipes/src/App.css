@@ -9,8 +9,7 @@ body {
     display: flex;
     justify-content: space-between;
     color: white;
-    text-align: center;
-  }
+}
 
 nav {
     text-decoration: none;
@@ -22,15 +21,29 @@ nav {
     margin-right: 50px;
     display: flex;
     justify-content: space-between;
-} 
+}
 
 a:link {
     text-decoration: none;
     color: white;
+    padding: 16px;
 }
 
 a:hover {
-    color:white;
+    color: white;
+}
+
+.Recipes {
+    margin: 16px 48px;
+}
+
+.search-form {
+    display: flex;
+    justify-content: space-around;
+}
+
+.searchType {
+    margin: 0px 15px;
 }
 
 h1 {
@@ -53,18 +66,41 @@ p {
 }
 
 .search-button {
-  background-color: #cc4c00;
-  color: white;
-  border-radius: 5px;
-  border: 1px solid black;
-  cursor: pointer;
-  height: 30px;
-  width: 120px;
-  margin-top: 30px;
+    background-color: #cc4c00;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+    height: 30px;
+    width: 120px;
+    margin-top: 30px;
 }
 
 .search-button:hover {
-  background-color: white;
-  color: black;
-  border: 2px solid #cc4c00;
+    background-color: white;
+    color: black;
+    border: 2px solid #cc4c00;
+}
+
+/* @media only screen and (min-width: 1281px) {
+    .nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0.5rem;
+    }
+
+    .search-form {
+        display: flex;
+        flex-direction: column;
+    }
+} */
+
+@media all and (max-width: 500px) {
+    .search-form {
+        display: flex;
+        flex-direction: column;
+    }
 }
