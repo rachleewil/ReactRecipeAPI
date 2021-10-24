@@ -14,16 +14,25 @@ interface Props {
 }
 //function Favorites({children}: {children: ReactNode}) {
     function Favorites({favs, children}: Props) {
-    return (
-        <div className="RecipeFavorites">
-            <h2>Favorite Recipes</h2>
-            <div>
-                <p>List of Your Recipes</p>
-                <p><Link to="/"><button>Back to Home</button></Link></p>
+        const { favorites } = useContext(FavoritesContext);
+        return (
+            <>
+            <div className="RecipeFavorites">
+                <h2>Favorite Recipes</h2>
+                <ul>
+                    {/* The first two li's are just test code to ensure the outer part of the Favorites function is working. */}
+                    <li> test a </li>
+                    <li> test b </li>
+                    {favorites.map((item) => (
+          
+                       <li>{item}</li>
+                    ))}
+                </ul>
+    
+            
             </div>
-            {children}
-        </div>
-    )
+            </>
+        )
 }
 
 // favorites list page of Recipes

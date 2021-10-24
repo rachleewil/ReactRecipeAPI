@@ -1,4 +1,5 @@
 import { ReactNode, createContext, useState } from "react";
+import React from 'react';
 import { Recipe } from "../models/recipe-model";
 
 interface FavoritesContextValue {
@@ -59,3 +60,4 @@ export function FavoritesContextProvider({children}: {children: Props}) {
 };
 
 
+export const useFavoritesContext = () => React.useContext(FavoritesContext);
