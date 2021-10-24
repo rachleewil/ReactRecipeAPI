@@ -105,9 +105,9 @@ function Recipes() {
           </div>
         </form>
 
-
+      <div className="grid">
       <Results recipes={recipes} />
-
+      </div>
     </div>
   );
 }
