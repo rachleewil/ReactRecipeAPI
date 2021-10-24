@@ -15,7 +15,8 @@ interface Props {
 }
 //function Favorites({children}: {children: ReactNode}) {
     function Favorites({favs, children}: Props) {
-        const { favorites } = useFavoritesContext(); 
+        const { favorites, deleteFavorite } = useFavoritesContext(); 
+        
         console.log("favorites array is");
         console.log(favorites);
         return (
@@ -25,7 +26,8 @@ interface Props {
                 <ul>
                     {favorites.map((item) => (
           
-                       <li>{item.recipe.label}</li>
+                       <li><button className="deleteButton" onClick={() => deleteFavorite(item.recipe.label)}>Delete from Favorites   </button>{item.recipe.label}</li>
+                       
                     ))}
                 </ul>
     
