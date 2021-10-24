@@ -4,6 +4,7 @@ import { Recipe } from "../models/recipe-model";
 import { fetchRecipes } from "../services/ReactAPIServices";
 import Results from '../components/Results';
 
+
 //import "./Recipes.css";
 
 function Recipes() {
@@ -112,4 +113,3 @@ function Recipes() {
 }
 
 export default Recipes;
-

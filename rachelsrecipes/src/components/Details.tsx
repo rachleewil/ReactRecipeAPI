@@ -34,6 +34,3 @@ interface Props {
 
 
 export default Details;
-
-
-
