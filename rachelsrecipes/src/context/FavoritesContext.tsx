@@ -37,32 +37,7 @@ interface Props {
 
 export function FavoritesContextProvider({children}: {children: Props}) {
 
-    const [favorites, setFavorites] = useState<Recipe[]>([  
-        {recipe: {
-            uri: "myUri",
-            label: "Chicken Salad",
-            calories: 500,
-            image: "image",
-            source: "source",
-            url: "url",
-            yield: 6,
-            dietLabels: ["diet"],
-            healthLabels: ["healthy"],
-            ingredientLines: ["chicken", "celery", "Mayonaise"],
-            ingredients: [
-              {
-                text: "ingredients test",
-                quantity: 6,
-                measure: "2 cups",
-                food: "food",
-                weight: 2,
-                foodId: "foodID"
-              }
-            ],
-            cuisineType: ["American"],
-            mealType: ["lunch"],
-            dishType: ["sandwich filling"]}
-          }]);
+    const [favorites, setFavorites] = useState<Recipe[]>([]);
 
 
     const addFavorite = (frecipe: Recipe): void => {

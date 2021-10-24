@@ -23,9 +23,6 @@ interface Props {
             <div className="RecipeFavorites">
                 <h2>Favorite Recipes</h2>
                 <ul>
-                    {/* The first two li's are just test code to ensure the outer part of the Favorites function is working. */}
-                    <li> test a </li>
-                    <li> test b </li>
                     {favorites.map((item) => (
           
                        <li>{item.recipe.label}</li>
