@@ -23,6 +23,10 @@ nav {
     justify-content: space-between;
 }
 
+a:visited {
+    color: white;
+}
+
 a:link {
     text-decoration: none;
     color: white;
