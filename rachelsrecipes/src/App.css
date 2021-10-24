@@ -2,6 +2,7 @@ body {
     background-color: #E5E1D6;
 }
 
+/* NavBar.tsx CSS */
 .NavBar {
     background-color: #282c34;
     text-decoration: none;
@@ -18,7 +19,6 @@ nav {
 .Link {
     text-decoration: none;
     color: white;
-    margin-right: 50px;
     display: flex;
     justify-content: space-between;
 }
@@ -30,13 +30,13 @@ a:visited {
 a:link {
     text-decoration: none;
     color: white;
-    padding: 16px;
 }
 
 a:hover {
     color: white;
 }
 
+/* Recipes.tsx CSS */
 .Recipes {
     margin: 16px 48px;
 }
@@ -48,6 +48,23 @@ a:hover {
 
 .searchType {
     margin: 0px 15px;
+}
+
+/* Results CSS */
+
+.grid{
+max-width: 95%;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-evenly;
+}
+
+.recipeCard {
+    background-color: #cc4c00;
+    border-radius: 16px;
+    padding: 15px;
+    margin: 15px;
+    max-width: 250px;
 }
 
 h1 {

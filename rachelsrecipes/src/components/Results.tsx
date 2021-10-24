@@ -14,12 +14,13 @@ function Results({recipes}: Props) {
     <>
     {recipes.map((hits) => {
       return (
-          <div key = {hits.recipe.label} >
-            {hits.recipe.label} 
-            <div className="recipeImage">
-              <img src={hits.recipe.image}  width="300" height="300"/>
+          <div className = "recipeCard" key = {hits.recipe.label} >
+            <div className="recipeResults">
+              <img src={hits.recipe.image}  width="250" height="250"/>
+              <h3 id = "recipeResultsName">{hits.recipe.label}</h3>
             </div>
             <p><Link to="/details">More Details</Link></p>
+            <p>Add to Favorites</p>
           </div>
       );
     })}
