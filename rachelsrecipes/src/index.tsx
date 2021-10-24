@@ -3,11 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import { FavoritesContextProvider } from './context/FavoritesContext';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+  {/* The context provider must be wrapped around the app 
+  for the context to be accessible to all parts of the code */}
+    <FavoritesContextProvider>
+      <App />
+    </FavoritesContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
