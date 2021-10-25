@@ -1,4 +1,5 @@
 import { ReactNode, createContext, useState } from "react";
+import React from 'react';
 import { Recipe } from "../models/recipe-model";
 
 interface FavoritesContextValue {
@@ -12,7 +13,7 @@ interface FavoritesContextValue {
 
 const defaultFavoritesValue: FavoritesContextValue = {
 
-    favorites: [],
+    favorites: [], 
     addFavorite: () => {},           // she told me NOT to return an object here and to return void
     deleteFavorite: () => {}         // but VSCode will not accept void
 
@@ -36,7 +37,9 @@ interface Props {
 
 export function FavoritesContextProvider({children}: {children: Props}) {
 
-    const [favorites, setFavorites] = useState<Recipe[]>([]);
+    const [favorites, setFavorites] = useState<Recipe[]>([  
+]);
+
 
     const addFavorite = (frecipe: Recipe): void => {
         setFavorites((prev) => [...prev, frecipe]);
@@ -59,3 +62,4 @@ export function FavoritesContextProvider({children}: {children: Props}) {
 };
 
 
+export const useFavoritesContext = () => React.useContext(FavoritesContext);

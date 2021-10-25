@@ -1,14 +1,44 @@
+/* General CSS */
 body {
-    background-color: #E5E1D6;
+    /* background-color: #E5E1D6; */
+    background-color: white;
 }
 
+h1 {
+    margin: 10px 5px;
+    padding: 0px 5px;
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 20px;
+    color: #102626;
+}
+
+h3 {
+    margin: 16px 0px;
+    text-align: center;
+}
+
+p {
+    font-size: 16px;
+    margin: 8px 0px;
+}
+
+
+/* NavBar.tsx CSS */
 .NavBar {
+    padding: 20px 40px;
     background-color: #282c34;
     text-decoration: none;
-    height: 100px;
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
     color: white;
+}
+
+.NavBarLinks {
+    float: right;
+    padding: 10px;
 }
 
 nav {
@@ -18,7 +48,6 @@ nav {
 .Link {
     text-decoration: none;
     color: white;
-    margin-right: 50px;
     display: flex;
     justify-content: space-between;
 }
@@ -28,63 +57,156 @@ a:visited {
 }
 
 a:link {
+    margin: 0px 20px;
     text-decoration: none;
     color: white;
-    padding: 16px;
 }
 
 a:hover {
-    color: white;
+    color: #2CA8A5;
 }
 
-.Recipes {
-    margin: 16px 48px;
-}
-
+/* Recipes.tsx CSS */
+/* Search Filter*/
 .search-form {
     display: flex;
     justify-content: space-around;
+    max-width: 1200px;
 }
 
 .searchType {
     margin: 0px 15px;
 }
 
-h1 {
-    font-size: 24px;
-    margin-left: 50px;
-}
-
-h2 {
-    font-size: 20px;
-    color: #853500;
-    margin-top: 30px;
-}
-
-p {
-    font-size: 16px;
-}
-
-.requriedField {
-    font-size: 12px;
-}
-
 .search-button {
-    background-color: #cc4c00;
+    font-family: 'Montserrat';
+    font-size: 18px;
+    background-color: #2CA8A5;
     color: white;
     border-radius: 5px;
-    border: 1px solid black;
+    border: none;
     cursor: pointer;
     height: 30px;
-    width: 120px;
+    width: 200px;
     margin-top: 30px;
 }
 
 .search-button:hover {
     background-color: white;
     color: black;
-    border: 2px solid #cc4c00;
+    border: 2px solid #2CA8A5;
 }
+
+.requriedField {
+    font-size: 12px;
+}
+
+
+
+/* Results.tsx CSS */
+.grid {
+    margin: 8px auto;
+    max-width: 95vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.recipeCard {
+    /* background-color: #cc4c00; */
+    background-color: #E7B964;
+    border-radius: 16px;
+    padding: 20px;
+    margin: 15px;
+    max-width: 250px;
+}
+
+.recipeCard:hover {
+    transform: translateY(-1px) scale(1.002) translateZ(0);
+    box-shadow: 0 8px 16px rgba(220, 233, 255, 0.48), 0 10px 20px;
+}
+
+.recipeResults {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Favorites Add + Delete Buttons CSS
+In Results.tsx  & Favorites.tsx*/
+
+.RecipeFavorites {
+    align-content: left;
+}
+
+.addButton {
+    font-family: 'Montserrat';
+    font-size: 14px;
+    background-color: #2CA8A5;
+    border-radius: 8px;
+    border-style: none;
+    padding: 5px 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.deleteButton{
+    font-family: 'Montserrat';
+    font-size: 14px;
+    background-color: #2CA8A5;
+    border-radius: 8px;
+    border-style: none;
+    padding: 5px 10px;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* Mobile and Below */
+@media all and (max-width: 600px) {
+    h1 {
+        margin: 10px 5px;
+        font-size: 18px;
+    }
+
+    .nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .NavBar {
+        padding: 10px 5px;
+    }
+
+    a.Link {
+        font-size: 16px;
+    }
+
+    .search-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 600px;
+    }
+
+    .search-button {
+        width: 90vw;
+    }
+
+    input {
+        width: 90vw;
+    }
+
+    select {
+        width: 90vw;
+    }
+}
+
+
 
 /* @media only screen and (min-width: 1281px) {
     .nav {
@@ -101,10 +223,3 @@ p {
         flex-direction: column;
     }
 } */
-
-@media all and (max-width: 500px) {
-    .search-form {
-        display: flex;
-        flex-direction: column;
-    }
-}

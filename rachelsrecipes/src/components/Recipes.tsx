@@ -44,7 +44,7 @@ function Recipes() {
   return (
     <div className="Recipes">
         <form onSubmit={getSearch} className="search-form">
-          <div className="searchType">
+          <div className="searchType" id="one">
           <h2>Search by Recipe</h2>
           <input required
             className="search-bar"
@@ -54,7 +54,7 @@ function Recipes() {
           <p className="requriedField">*required field*</p>
           </div>
 
-          <div className = "searchType">
+          <div className = "searchType" id="two">
             <h2>Select a Meal Type</h2>
             <select required
               className="mealType"
@@ -69,7 +69,7 @@ function Recipes() {
             <p className="requriedField">*required field*</p>
           </div>
 
-          <div className="searchType">
+          <div className="searchType" id="three">
             <h2>Select a Cuisine Type</h2>
             <select required
               className="cuisineType"
@@ -105,9 +105,9 @@ function Recipes() {
           </div>
         </form>
 
-
+      <div className="grid">
       <Results recipes={recipes} />
-
+      </div>
     </div>
   );
 }

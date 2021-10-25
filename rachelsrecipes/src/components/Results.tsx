@@ -1,6 +1,7 @@
 import React from 'react';
 import { Recipe } from "../models/recipe-model";
-import { Link } from "react-router-dom"; {/* added Link */}
+import { FavoritesContext, useFavoritesContext } from "../context/FavoritesContext";
+import { Link } from "react-router-dom"; {/* added Link  - note no import can go below this commented line*/}
 
 
 interface Props {
@@ -9,17 +10,18 @@ interface Props {
 
 
 function Results({recipes}: Props) {
-
+  const { addFavorite } = useFavoritesContext(); 
   return (
     <>
     {recipes.map((hits) => {
       return (
-          <div key = {hits.recipe.label} >
-            {hits.recipe.label} 
-            <div className="recipeImage">
-              <img src={hits.recipe.image}  width="300" height="300"/>
+          <div className = "recipeCard" key = {hits.recipe.label} >
+            <div className="recipeResults">
+              <img src={hits.recipe.image}  width="250" height="250"/>
+              <h3 id = "recipeResultsName">{hits.recipe.label}</h3>
+              <p id="details"><Link to="/details">More Details</Link></p>
+            <button className="addButton" onClick={() => addFavorite(hits)}>Add to Favorites</button>
             </div>
-            <p><Link to="/details">More Details</Link></p>
           </div>
       );
     })}
@@ -27,3 +29,4 @@ function Results({recipes}: Props) {
   )};
 
   export default Results;
+
