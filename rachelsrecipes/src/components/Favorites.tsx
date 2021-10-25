@@ -42,9 +42,9 @@ interface Props {
         )
 }
 
-// favorites list page of Recipes
-// details button
-// remove recipes from favorites list
-//back button
+// Favorites list page of Recipes
+// Details button
+// Remove recipes from favorites list
+// Back button
 
 export default Favorites;
