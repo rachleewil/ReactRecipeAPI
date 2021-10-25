@@ -43,6 +43,8 @@ function Recipes() {
 
   return (
     <div className="Recipes">
+        <h2 id="title">TIME TO COOK!</h2>
+        <p id="content"> Search recipes by Name, Meal Type, and Cuisine Type</p>
         <form onSubmit={getSearch} className="search-form">
           <div className="searchType" id="one">
           <h2>Search by Recipe</h2>
@@ -106,7 +108,7 @@ function Recipes() {
         </form>
 
       <div className="grid">
-      <Results recipes={recipes} />
+        <Results recipes={recipes}/>
       </div>
     </div>
   );
