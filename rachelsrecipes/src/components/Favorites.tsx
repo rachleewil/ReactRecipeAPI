@@ -22,7 +22,7 @@ interface Props {
         return (
             <>
             <div className="RecipeFavorites">
-                <h2>Favorite Recipes</h2>
+                <h2 id="title">Favorite Recipes</h2>
                 <div className="grid">
                     {favorites.map((item) => (
                        <div className = "recipeCard" key = {item.recipe.label} >
@@ -30,7 +30,7 @@ interface Props {
                          <img src={item.recipe.image}  width="250" height="250"/>
                          <h3 id = "recipeResultsName">{item.recipe.label}</h3>
                          <p><Link to="/details">More Details</Link></p>
-                         <button className="deleteButton" onClick={() => deleteFavorite(item.recipe.label)}>Remove From Favorites</button>
+                         <button className="deleteButton" onClick={() => deleteFavorite(item.recipe.label)}>Remove</button>
                        </div>
                        </div>
                     ))}
