@@ -185,8 +185,7 @@ In Results.tsx  & Favorites.tsx*/
     border: 2px solid #2CA8A5;
 }
 
-/* Back to Home button
-In Details.tsx*/
+/* Details.tsx CSS*/
 .homeButton {
     font-family: 'Montserrat';
     font-size: 14px;
@@ -206,28 +205,31 @@ In Details.tsx*/
     border: 2px solid #2CA8A5;
  }
 
+ .recipeDetails {
+    margin-left: 30%;
+    margin-top: 50px;
+    font-weight: bold;
+ }
+
 
 /* Mobile and Below */
 @media all and (max-width: 600px) {
-    h1 {
-        margin: 10px 5px;
-        font-size: 18px;
-    }
-
-    .nav {
-        display: flex;
-        flex-wrap: wrap;
+    .NavBar { 
         justify-content: center;
-        align-items: center;
-        width: 100%;
     }
-
-    .NavBar {
-        padding: 10px 5px;
+    
+    .NavIcon {
+        padding-right: 12%;
     }
-
+    
+    .NavBarLinks {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+    
     a.Link {
-        font-size: 16px;
+        font-size: 12px;
     }
 
     .search-form {
@@ -238,12 +240,16 @@ In Details.tsx*/
     }
 
     .search-button {
-        width: 90vw;
+        width: 65vw;
     }
 
     input, select {
-        width: 90vw;
+        width: 65vw;
     }
+
+    .recipeDetails {
+        margin-left: 15%;
+     }
 }
 
 
