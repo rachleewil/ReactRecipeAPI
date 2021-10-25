@@ -59,7 +59,7 @@ a:hover {
 /* Recipes.tsx CSS */
 /* Search Filter*/
 
-#title{
+#title {
     text-align: center;
     font-size: 30px;
     margin-top: 50px;
@@ -168,7 +168,7 @@ In Results.tsx  & Favorites.tsx*/
     border: 2px solid #2CA8A5;
 }
 
-.deleteButton{
+.deleteButton {
     font-family: 'Montserrat';
     font-size: 14px;
     background-color: #2CA8A5;
@@ -184,6 +184,27 @@ In Results.tsx  & Favorites.tsx*/
     color: black;
     border: 2px solid #2CA8A5;
 }
+
+/* Back to Home button
+In Details.tsx*/
+.homeButton {
+    font-family: 'Montserrat';
+    font-size: 14px;
+    background-color: #2CA8A5;
+    border-radius: 8px;
+    border-style: none;
+    padding: 5px 10px;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 20px;
+ }
+
+ .homeButton:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid #2CA8A5;
+ }
 
 
 /* Mobile and Below */
