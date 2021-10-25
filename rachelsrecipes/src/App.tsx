@@ -21,7 +21,7 @@ function App() {
             </Route>
 
             <Route exact path="/details">
-              <Details/>
+              <Details recipes={[]}/>
             </Route>
 
             <Route exact path="/favorites">
