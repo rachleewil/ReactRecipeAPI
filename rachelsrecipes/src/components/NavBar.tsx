@@ -6,10 +6,11 @@ function NavBar() {
     <>
         <nav>
           <div className="NavBar">
+            <img className="NavIcon" src="RachelsRecipes2.svg" width="60" height="60"/>
             <h1>Rachel's Recipes</h1>
             <div className="NavBarLinks">
-              <Link to="/">Search for Recipes</Link>
-              <Link to="/favorites">Favorites List</Link>
+              <a><Link to="/">Search Recipes</Link></a>
+              <a><Link to="/favorites">My Favorites</Link></a>
             </div>
           </div>     
         </nav>
