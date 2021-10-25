@@ -21,7 +21,22 @@ function App() {
             </Route>
 
             <Route exact path="/details">
-              <Details />
+              <Details recipe={{
+                uri: '',
+                label: '',
+                calories: 0,
+                image: '',
+                source: '',
+                url: '',
+                yield: 0,
+                dietLabels: [],
+                healthLabels: [],
+                ingredientLines: [],
+                //ingredients: [],
+                cuisineType: [],
+                mealType: [],
+                dishType: []
+              }}  />
             </Route>
 
             <Route exact path="/favorites">

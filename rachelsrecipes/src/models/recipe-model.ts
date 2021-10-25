@@ -10,16 +10,16 @@ export interface Recipe {
     dietLabels: string[];
     healthLabels: string[];
     ingredientLines: string[];
-    ingredients: [
-      {
-        text: string;
-        quantity: number;
-        measure: string;
-        food: string;
-        weight: number;
-        foodId: string;
-      }
-    ];
+    // ingredients: [
+    //   {
+    //     text: string;
+    //     quantity: number;
+    //     measure: string;
+    //     food: string;
+    //     weight: number;
+    //     foodId: string;
+    //   }
+    // ];
     cuisineType: string[];
     mealType: string[];
     dishType: string[];

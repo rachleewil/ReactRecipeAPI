@@ -11,6 +11,7 @@ const Details: FC<Recipe> = ({ recipe }): JSX.Element => {
     <p>Meal Type: {recipe.mealType}</p>
     <p>Cuisine Type: {recipe.cuisineType}</p>
     <p>Calories: {recipe.calories}</p>
+    <p><Link to="/"><button className="homeButton">Back to Home</button></Link></p>
   </>;
 };
 
