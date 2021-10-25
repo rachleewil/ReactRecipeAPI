@@ -1,32 +1,31 @@
 //children: JSX.Element,
-import React, { useContext } from "react";
-import { ReactNode } from "react";
-import { useParams } from "react-router";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { FavoritesContext } from "../context/FavoritesContext";
+import React from "react";
 import { Recipe } from "../models/recipe-model";
-import { Link } from "react-router-dom"; {/* added Link */}
+import { Link } from "react-router-dom"; {/* added Link */ }
 
 
 interface Props {
-    favs?: Recipe[];
-    children?: ReactNode; 
-    
+    recipes: Recipe[];
 }
 
-//function Details({children}: {children: ReactNode}) {
-    function Details({favs, children}: Props)  {
+function Details({recipes}: Props) {
     return (
-        <div className="RecipeDetails">
-            <h2>Recipe Details</h2>
-            <div>
-                <p>Details for each recipe</p>
-                <p><Link to="/"><button>Back to Home</button></Link></p>
+      <>
+      <h2>Recipe Details</h2>
+      {recipes.map((hits) => {
+        return (
+            <div key = {hits.recipe.label} >
+              <div className="RecipeDetails">
+                {hits.recipe.label}
+                {hits.recipe.mealType}
+                {hits.recipe.cuisineType}
+              </div>
             </div>
-            {children}
-        </div>
-    )
-}
+        );
+      })}
+      <p><Link to="/"><button>Back to Home</button></Link></p>
+      </>
+    )};
 
 // Link to see the recipe on their original source site
 //Favorites button
@@ -34,6 +33,4 @@ interface Props {
 
 
 export default Details;
-
-
 
