@@ -137,6 +137,11 @@ input, select {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
+}
+
+#details {
+    margin-top: 40px;
 }
 
 /* Favorites Add + Delete Buttons CSS
