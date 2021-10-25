@@ -21,6 +21,8 @@ function Results({recipes}: Props) {
               <h3 id = "recipeResultsName">{hits.recipe.label}</h3>
               <p>See the the full recipe on <b><a href={hits.recipe.url} target="_blank">{hits.recipe.source}</a></b></p>
               <p id="details"><Link to="/details">More Details</Link></p>
+              <p>See the the full recipe on <b>{hits.recipe.source}</b></p>
+              <a href={hits.recipe.url}>Click Here</a>
             <button className="addButton" onClick={() => addFavorite(hits)}>Add to Favorites</button>
             </div>
           </div>
